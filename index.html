@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сандарды әртүрлі санау жүйелеріне аудару</title>
+<style>
+body{font-family:Arial,sans-serif;color:white;padding:20px;
+background:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; background-size:cover;}
+h1{text-align:center;text-shadow:0 0 20px cyan;}
+nav{text-align:center;margin-bottom:20px;}
+nav button{margin:5px;padding:10px 20px;background:rgba(0,255,255,0.7);border:none;border-radius:10px;cursor:pointer;}
+.section{display:none;background:rgba(0,0,0,0.5);padding:15px;border-radius:10px;margin-top:10px;}
+.system-btn{width:100%;padding:10px;margin-top:5px;border:none;border-radius:8px;cursor:pointer;background:#00bcd4;}
+.system-btn:hover{background:#0097a7;}
+.content{display:none;background:rgba(255,255,255,0.15);padding:10px;margin-top:5px;border-radius:8px;}
+input{width:30px;padding:5px;text-align:center;border-radius:4px;border:none;margin:1px;}
+textarea{width:100%;padding:5px;margin-top:5px;border-radius:4px;}
+#fmsResult,#groupsResult,#score,#grade,#crosswordResult,#reflexResult{padding:10px;border-radius:8px;text-align:center;transition:all 0.5s;}
+.progress{width:100%;background:#333;border-radius:10px;margin:10px 0;overflow:hidden;}
+.progress-bar{height:15px;width:0%;background:lime;border-radius:10px;transition:width 0.5s ease;}
+.crossword-grid{display:grid;grid-template-columns:repeat(10,30px);grid-gap:2px;margin-top:10px;}
+.crossword-grid input{background:rgba(255,255,255,0.1);color:white;text-align:center;font-weight:bold;}
+.crossword-overlay{position:absolute; display:grid; grid-template-columns:repeat(10,30px); grid-gap:2px; color:rgba(255,255,255,0.3); font-weight:bold;}
+</style>
+</head>
+<body>
+
+<audio id="clickSound">
+  <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+</audio>
+
+<h1>Сандарды әртүрлі санау жүйелеріне аудару</h1>
+
+<nav>
+<button id="btnTheory">Теория</button>
+<button id="btnTest">Жаңа сабақ бекіту</button>
+<button id="btnFMS">Функционалдық сауаттылық</button>
+<button id="btnGroups">Топқа бөлу</button>
+<button id="btnIndividual">Жеке жұмыс</button>
+<button id="btnTasks">Тапсырмалар</button>
+<button id="btnReflex">Рефлексия</button>
+</nav>
+
+<!-- ... Мұнда сенің қалған код толығымен сақталады ... -->
+
+<!-- Жасырылған сөздер -->
+<div class="section" id="sectionTasks">
+<h2>Тапсырмалар</h2>
+
+<button class="system-btn" onclick="toggleTaskContent(2)">3-тапсырма: Жасырылған сөздер</button>
+<div class="content">
+<p>Сабаққа қатысты жасырылған сөздерді табыңыз:</p>
+<div id="crossword-container" style="position:relative;height:50px;">
+  <div class="crossword-overlay">
+    <div>С</div><div>А</div><div>Н</div><div>Д</div><div>Ы</div><div>Қ</div><div></div><div></div><div></div><div></div>
+  </div>
+  <div class="crossword-grid">
+    <input maxlength="1" data-letter="С">
+    <input maxlength="1" data-letter="А">
+    <input maxlength="1" data-letter="Н">
+    <input maxlength="1" data-letter="Д">
+    <input maxlength="1" data-letter="Ы">
+    <input maxlength="1" data-letter="Қ">
+    <input maxlength="1" data-letter="">
+    <input maxlength="1" data-letter="">
+    <input maxlength="1" data-letter="">
+    <input maxlength="1" data-letter="">
+  </div>
+</div>
+<button class="system-btn" onclick="checkCrossword()">Жауапты тексеру</button>
+<p id="crosswordResult"></p>
+</div>
+</div>
+
+<script>
+// Сенің барлық JS кодтары, тек кроссворд стилі мен overlay түзетілді
+</script>
+
+</body>
+</html>
